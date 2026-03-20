@@ -4,48 +4,52 @@
 Secure Multi-Tenant Identity and Access Management System using JWT
 
 ## Project Description
-This project is a cloud-based Identity and Access Management (IAM) system designed for SaaS platforms. It provides secure authentication and role-based access control using JSON Web Tokens (JWT). The system supports multi-tenant architecture where different organizations can manage their users securely.
+This project is a cloud-based Identity and Access Management (IAM) system designed for SaaS platforms. It provides secure authentication and role-based access control using JSON Web Tokens (JWT). The system supports multi-tenant architecture and ensures data isolation between tenants.
 
 ## Features
 - User Registration
-- User Login with JWT Authentication
+- Secure Login with JWT Authentication
 - Role-Based Access Control (Admin/User)
-- Protected API Endpoints
-- Multi-Tenant Support (Tenant ID based)
-- Secure Access using Tokens
+- Multi-Tenant Support (Tenant Isolation)
+- Password Hashing using bcrypt
+- Audit Logging (User activity tracking)
 
 ## Technologies Used
 - Python
 - Flask
-- SQLite Database
+- SQLite
 - Flask-JWT-Extended
+- bcrypt
 
 ## API Endpoints
 
-### 1. Register User
+### Register User
 POST /register
 
-### 2. Login
+### Login
 POST /login
 
-### 3. Admin Access
+### Admin Access
 GET /admin
 
-## How to Run the Project
+### Logs
+GET /logs
+
+## How to Run
 
 1. Install dependencies:
-pip install flask flask_sqlalchemy flask_jwt_extended
+pip install flask flask_sqlalchemy flask_jwt_extended bcrypt
 
-2. Run the application:
+2. Run:
 python app.py
 
-3. Open in browser:
+3. Open:
 http://127.0.0.1:5000/
 
 ## Project Structure
-- app.py → Main backend code
-- database.db → Database file
-- README.md → Project documentation
+- app.py → Backend logic
+- database.db → Database
+- README.md → Documentation
 
 ## Author
 - Manpal
